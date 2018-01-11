@@ -6,6 +6,8 @@ var app = express();
 app.use(bodyParser());
 app.use(cors());
 
+var testGit = 100;
+
 app.use(express.static("../Proiect_TIC_HTML_CSS"));
 
 app.get("/", (req, res) => {
