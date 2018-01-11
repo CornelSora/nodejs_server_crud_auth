@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch via NPM",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "program": "${workspaceRoot}/server/server.js",
+            "restart": true,
+            "runtimeArgs": [
+                "run-script", "debug"
+            ],
+            "port": 3090
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceRoot}"
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 8080,
+            "webRoot": "${workspaceRoot}"
+        }
+    ]
+}
